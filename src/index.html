@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Just do it</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="vendor/bootstrap-grid.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_orange.css">
+    <link rel="stylesheet" href="vendor/range-slider.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="vendor/icons/icon-font/css/Glyphter.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="column column-left">
+        <section id="sidebar">
+          <nav class="navigation">
+            <div class="logo-container">
+              <h1 class="logo">Just do it</h1>
+              <i class="fas fa-bars menu-toggler"></i>
+            </div>
+            <div class="sidebar-nav">
+              <ul class="list">
+                <li class="active">
+                  <div href="#" class="link icon-link"><i class="icon-general"></i></div>
+                  <a href="#general" class="link link-large list-link-header">General</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-details"></i></div>
+                  <a href="#details" class="link link-large list-link-header">Details</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-links"></i></div>
+                  <a href="#links" class="link link-large list-link-header">Links</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-banners"></i></div>
+                  <a href="#banners" class="link link-large list-link-header">Banners</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-personaldata"></i></div>
+                  <a href="#personalData" class="link link-large list-link-header">Personal data</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-payout"></i></div>
+                  <a href="#payout" class="link link-large list-link-header">Payout</a>
+                </li>
+                <li>
+                  <div href="#" class="link icon-link"><i class="icon-postback"></i></div>
+                  <a href="#postback" class="link link-large list-link-header">Postback</a>
+                </li>
+              </ul>
+            </div>
+            <div class="avatar-wrapper">
+              <h2 class="section-header">Your manager</h2>
+              <div>
+                <div class="avatar-img"><img src="images/profile-avatar.png" alt="profile-avatar"></div>
+                <a href="#" class="link link-large">Mikhael E.</a>
+              </div>
+            </div>
+            <div class="mobile-topbar-content">
+              <div class="wallet-dropdown">
+                <div class="wallet-dropdown-header">
+                  <i class="icon-wallet icon-link__noncolor"></i>
+                  <h3 class="subsection-header">$1,500.00</h3>
+                  <i class="icon-arrow-down-small icon-link__small"></i>
+                </div>
+                <ul class="list one-digit-list wallet-list">
+                  <li><h3 class="list-header">CPA</h3><p class="text list-text">$1000</p></li>
+                  <li><h3 class="list-header">CPL</h3><p class="text list-text">$1100</p></li>
+                  <li><h3 class="list-header">Turnover</h3><p class="text list-text">$1030</p></li>
+                  <li><h3 class="list-header">Net deposit</h3><p class="text list-text">$1000</p></li>
+                </ul>
+              </div>
+              <div class="profile-container">
+                <a href="#" class="link link-small"><i class="icon-profile icon-link__noncolor"></i>Leonardo DiCaprio</a>
+              </div>
+              <div class="notification-icon-wrapper">
+                <i class="icon-notification icon-link__noncolor"></i>
+                <div>
+                  <i class="icon-quit icon-link__noncolor"></i>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+      </div>
+      <div class="column column-right">
+        <div class="overlay" id="overlay">
+            <!-- TODO: modals (with js) -->
+        </div>
+        <section id="topbar">
+          <header class="topbar">
+            <div class="wallet-dropdown">
+              <div class="wallet-dropdown-header">
+                <i class="icon-wallet icon-link__noncolor"></i>
+                <h3 class="subsection-header">$1,500.00</h3>
+                <i class="icon-arrow-down-small icon-link__small"></i>
+              </div>
+              <ul class="list one-digit-list wallet-list">
+                <li><h3 class="list-header">CPA</h3><p class="text list-text">$1000</p></li>
+                <li><h3 class="list-header">CPL</h3><p class="text list-text">$1100</p></li>
+                <li><h3 class="list-header">Turnover</h3><p class="text list-text">$1030</p></li>
+                <li><h3 class="list-header">Net deposit</h3><p class="text list-text">$1000</p></li>
+              </ul>
+            </div>
+            <div class="notification-icon-wrapper">
+              <i class="icon-notification icon-link__noncolor"></i>
+            </div>
+            <div class="profile-container">
+              <a href="#" class="link link-small"><i class="icon-profile icon-link__noncolor"></i>Leonardo DiCaprio</a>
+            </div>
+            <div>
+              <i class="icon-quit icon-link__noncolor"></i>
+            </div>
+          </header>
+        </section>
+        <main class="content-container">
+          <section id="general" class="page active">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">General statistics</h2>
+              </div>
+              <div class="date-picker flatpickr">
+                <div class="input-container">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateStart" placeholder="Select date" data-input="">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateEnd" placeholder="Select date" data-input="">
+                  <i class="icon-calendar icon-link__noncolor"></i>
+                </div>
+                <div class="btn btn-refresh icon-large-btn input-button" title="clear" data-clear=""><i class="icon-refresh"></i></div>
+              </div>
+              <div class="chart-list-container">
+                <ul class="list one-digit-list">
+                  <li><h3 class="list-header">Visit Signups</h3><p class="list-text">124</p></li>
+                  <li><h3 class="list-header">Net deposit</h3><p class="list-text">564</p></li>
+                  <li><h3 class="list-header">FTD</h3><p class="list-text">445</p></li>
+                  <li><h3 class="list-header">Turn over</h3><p class="list-text">432</p></li>
+                </ul>
+              </div>
+              <div class="chart-container">
+                <h3 class="subsection-header">Earnings chart</h3>
+                <div class="canvas-container">
+                  <canvas id="myChart" height="180"></canvas>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section id="links" class="page active">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">Links</h2>
+              </div>
+              <div class="table-container__small table-responsive">
+                <button type="button" class="btn btn-default">+ add new</button>
+                <table class="table table__small">
+                  <thead></thead>
+                  <tbody>
+                    <tr>
+                      <th scope="col">Home page</th>
+                      <td><a href="#" class="link link-large">http://www.homepage.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Currently offer</th>
+                      <td><a href="#" class="link link-large">http://www.currently.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Blurpix</th>
+                      <td><a href="#" class="link link-large">http://www.blurpix.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Your site</th>
+                      <td><a href="#" class="link link-large">http://www.yoursite.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Google</th>
+                      <td><a href="#" class="link link-large">http://www.google.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Facebook</th>
+                      <td><a href="#" class="link link-large">http://www.facebook.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Dashboard</th>
+                      <td><a href="#" class="link link-large">http://www.dashboard.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Blurax</th>
+                      <td><a href="#" class="link link-large">http://www.blurax.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Piece of Wine</th>
+                      <td><a href="#" class="link link-large">http://www.pieceofwine.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Twitter</th>
+                      <td><a href="#" class="link link-large">http://www.twitter.com</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" class="btn btn-default">+ add new</button>
+              </div>
+            </div>
+
+          </section>
+          <section id="details" class="page">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">Detail statistic</h2>
+              </div>
+              <div class="date-picker flatpickr">
+                <div class="input-container">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateStart" placeholder="Select date" data-input="">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateEnd" placeholder="Select date" data-input="">
+                  <i class="icon-calendar icon-link__noncolor"></i>
+                </div>
+                <div class="btn btn-refresh icon-large-btn input-button" title="clear" data-clear=""><i class="icon-refresh"></i></div>
+              </div>
+              <div class="table-container__large table-responsive">
+                <table class="table table__large">
+                  <thead>
+                    <tr>
+                      <th scope="col">Tracker name <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Initiated date <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Visits <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Unique <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Signups <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">FTD <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Depositors <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Deposits ($) <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Payout ($) <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Turnover <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Deal <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">aff/sam_test</th>
+                      <td>17/08/02 (12:58)</td>
+                      <td>232</td>
+                      <td>114</td>
+                      <td>12</td>
+                      <td>6</td>
+                      <td>3</td>
+                      <td>34,425.00</td>
+                      <td>234.00</td>
+                      <td>421,342.00</td>
+                      <td>cpl(200)</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination">
+                <ul class="list">
+                  <li><div href="#" class="link icon-link icon-link__noncolor"><i class="icon-arrow-left"></i></div></li>
+                  <li><a href="#" class="link link-small">1</a></li>
+                  <li><a href="#" class="link link-small">2</a></li>
+                  <li><a href="#" class="link link-small">3</a></li>
+                  <li><a href="#" class="link link-small">4</a></li>
+                  <li><a href="#" class="link link-small">5</a></li>
+                  <li><a href="#" class="link link-small">6</a></li>
+                  <li><a href="#" class="link link-small">7</a></li>
+                  <li><a href="#" class="link link-small">8</a></li>
+                  <li><a href="#" class="link link-small">9</a></li>
+                  <li><div href="#" class="link icon-link icon-link__noncolor"><i class="icon-arrow-right "></i></div></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section id="banners" class="page">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">Banners</h2>
+              </div>
+              <div class="table-container__small table-responsive">
+                <button type="button" class="btn btn-default">+ add new</button>
+                <table class="table table__small">
+                  <thead></thead>
+                  <tbody>
+                    <tr>
+                      <th scope="col">Banner main</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/bannermain.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Sign up banner</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/signup.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Banner left side</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/leftside.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Vertical banner</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/vert.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Front banner</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/front.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="col">Horizontal banner</th>
+                      <td><a href="#" class="link link-large">http://www.website.com/horizontal.gif</a></td>
+                      <td class="table-actions">
+                        <i class="icon-links icon-link__color"></i>
+                        <i class="icon-trash icon-link__noncolor"></i>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" class="btn btn-default">+ add new</button>
+              </div>
+            </div>
+          </section>
+          <section id="personalData" class="page">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">Personal data</h2>
+              </div>
+              <form> <!-- action="" method="POST" -->
+                <div class="form-wrapper">
+                  <div class="input-container">
+                    <label>Name</label>
+                    <input class="form-input" type="text" name="name" placeholder="Leonardo" required>
+                  </div>
+                  <div class="input-container">
+                    <label>Surname</label>
+                    <input class="form-input" type="text" name="surname" placeholder="DiCaprio" required>
+                  </div>
+                  <div class="input-container">
+                    <label>E-mail</label>
+                    <input class="form-input" type="email" name="email" placeholder="leo.gmail@.com" required>
+                  </div>
+                  <div class="input-container">
+                    <label>Phone number</label>
+                    <input class="form-input" inputmode="numeric" type="tel" name="tel" placeholder="+1 432 555 00 44" minlength="9" maxlength="15" required>
+                  </div>
+                </div>
+                <div class="form-wrapper">
+                  <div class="input-container">
+                    <label>Skype</label>
+                    <input class="form-input" type="text" name="skype" placeholder="Leonardo.D" required>
+                  </div>
+                  <div class="input-container">
+                    <label>ICQ</label>
+                    <input class="form-input" type="text" name="icq" placeholder="" required>
+                  </div>
+                  <div class="input-container">
+                    <label>Msn</label>
+                    <input class="form-input" type="email" name="msn" placeholder="" required>
+                  </div>
+                </div>
+                <div class="form-wrapper">
+                  <div class="input-container">
+                    <label>Wallet</label>
+                    <input class="form-input" type="text" name="wallet" placeholder="" required>
+                  </div>
+                </div>
+                <div class="form-wrapper">
+                  <div class="input-container">
+                    <label>Password</label>
+                    <input class="form-input" id="password1" type="password" name="password1" required>
+                  </div>
+                  <div class="input-container">
+                    <label>Repeat</label>
+                    <input class="form-input" id="passwordRepeat" type="password" name="passwordRepeat" required>
+                  </div>
+                  <i class="fas fa-eye-slash" id="togglePassword"></i>
+                </div>
+                <div class="form-btn-container">
+                  <button type="submit" class="btn btn-default">Save</button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <section id="payout" class="page">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">Payout history</h2>
+              </div>
+              <div class="date-picker flatpickr">
+                <div class="input-container">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateStart" placeholder="Select date" data-input="">
+                  <!-- <label></label> -->
+                  <input class="form-input flatpickr-input" type="text" name="dateEnd" placeholder="Select date" data-input="">
+                  <i class="icon-calendar icon-link__noncolor"></i>
+                </div>
+                <div class="btn btn-refresh icon-large-btn input-button" title="clear" data-clear=""><i class="icon-refresh"></i></div>
+              </div>
+              <div class="table-container__large table-responsive">
+                <table class="table table__large">
+                  <thead>
+                    <tr>
+                      <th scope="col">Date <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Amount ($) <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Deal <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                      <th scope="col">Account <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>34,425.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>29,436.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>34,425.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>29,436.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>34,425.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>29,436.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>34,425.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                    <tr>
+                      <td>17/08/02 (12:58)</td>
+                      <td>29,436.00</td>
+                      <td>cpl (200)</td>
+                      <td>bank</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="pagination">
+                <ul class="list">
+                  <li><div href="#" class="link icon-link icon-link__noncolor"><i class="icon-arrow-left"></i></div></li>
+                  <li><a href="#" class="link link-small">1</a></li>
+                  <li><a href="#" class="link link-small">2</a></li>
+                  <li><a href="#" class="link link-small">3</a></li>
+                  <li><a href="#" class="link link-small">4</a></li>
+                  <li><a href="#" class="link link-small">5</a></li>
+                  <li><a href="#" class="link link-small">6</a></li>
+                  <li><a href="#" class="link link-small">7</a></li>
+                  <li><a href="#" class="link link-small">8</a></li>
+                  <li><a href="#" class="link link-small">9</a></li>
+                  <li><div href="#" class="link icon-link icon-link__noncolor"><i class="icon-arrow-right "></i></div></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section id="postback" class="page">
+            <div class="container-fluid">
+              <div class="section-header-container">
+                <h2 class="section-header">New postback</h2>
+              </div>
+              <div class="parameters">
+                <p class="text">You can insert some parameters in this postback</p>
+                <div class="text-parameters">
+                    <div class="input-container">
+                      <label class="label-textarea">Signup</label>
+                      <textarea class="form-input" type="text" name="signup" placeholder="crm_userId=%user_id%"></textarea>
+                    </div>
+                    <div class="input-container">
+                      <label class="label-textarea">Deposit</label>
+                      <textarea class="form-input" type="text" name="deposit" placeholder="crm_userId=%user_id%"></textarea>
+                    </div>
+                </div>
+                <div class="input-parameters">
+                  <div class="select-container">
+                    <h3 class="subsection-header">Postback type</h3>
+                    <select maxheight="-1">
+                      <option value="">S2S (http://..)</option>
+                      <option value="1">Option 1</option>
+                    </select>
+                  </div>
+                  <div class="select-container">
+                    <h3 class="subsection-header">To countries</h3>
+                    <select maxheight="-1">
+                      <option value="">Select countries</option>
+                      <option value="1">Option 1</option>
+                    </select>
+                  </div>
+                  <div class="select-container">
+                    <h3 class="subsection-header">Sending options</h3>
+                    <select maxheight="-1">
+                      <option value="">Select</option>
+                      <option value="1">Option 1</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="send-container">
+                <div class="send-container-data">
+                  <div class="checkbox-list">
+                    <h3 class="subsection-header"><span>NOT</span> send statuses</h3>
+                    <ul class="list">
+                      <li>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <span class="checkbox__checkmark"></span>
+                          checkNumber
+                        </label>
+                        <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+                      </li>
+                      <li>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <span class="checkbox__checkmark"></span>
+                          noAnswer
+                        </label>
+                        <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+                      </li>
+                      <li>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <span class="checkbox__checkmark"></span>
+                          noCall
+                        </label>
+                        <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+                      </li>
+                      <li>
+                        <label class="checkbox">
+                          <input type="checkbox">
+                          <span class="checkbox__checkmark"></span>
+                          callAgain
+                        </label>
+                        <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="send-time-range">
+                    <h3 class="subsection-header">Send after</h3>
+                    <div class="hour-picker range-slider">
+                      <label class="sending-hour-title"></label>
+                      <div class="output"></div>
+                      <input type="range" name="hour" min="0" max="168" step="1" value="104" data-rangeslader="">
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-default">Create Pixel</button>
+              </div>
+            </div>
+          </section>
+        </main>
+
+      </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/plugins/rangePlugin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="vendor/range-slider.min.js"></script>
+    <script src="js/script.js" type="module"></script>
+
+  </body>
+</html>

@@ -1,0 +1,119 @@
+.table-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+
+  &__small {
+    max-width: 684px;
+    margin: 24px auto;
+  }
+
+  &__large {
+    width: 100%;
+    max-width: 1250px;
+    margin: 18px auto;
+  }
+
+}
+
+.table__small {
+  width: 100%;
+  margin: 18px auto;
+  border-top: 1px solid $bg-light-color;
+
+  tr {
+    @include flex(row, center, space-between);
+    height: 60px;
+    margin: 0;
+    //border-bottom: 1px solid $bg-light-color;
+
+    &:hover {
+      background-color: $highlight-light-color;
+
+      .table-actions i {
+        visibility: visible;
+      }
+    }
+
+    th, td {
+      @include flex(row, center, flex-start);
+      padding: 0;
+      height: 100%;
+    }
+  
+    th {
+      font-weight: $font-normal;
+      color: $base-text-color;
+      flex: 3;
+    }
+  
+    td {
+      flex: 3;
+    }
+  
+    .table-actions {
+      @include flex(row, center, space-evenly);
+      flex: 1;
+  
+      i {
+        visibility: hidden;
+      }
+    }
+  
+    .table-icon {
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.table__large {
+  width: 100%;
+  vertical-align: middle;
+
+  i {
+    visibility: hidden;
+  }
+
+  th, td {
+    min-width: 30px;
+    width: fit-content;
+  }
+
+  thead {
+    color: $base-text-color;
+    font-weight: $font-normal;
+  }
+  
+  thead tr th {
+    cursor: pointer;
+    user-select: none;
+
+    &:hover, &.active {
+      background-color: $highlight-light-color;
+      border-radius: $radius;
+    }
+  }
+
+  thead tr th:hover, thead tr th.active {
+    i {
+      visibility: visible;
+    }
+  }
+  
+  tbody {
+    color: $sidebar-dark-color;
+    
+    th, td {
+      height: 60px;
+      font-weight: $font-light;
+    }
+  }
+}
+
+.table__large tbody tr {
+  &:hover {
+    background-color: $highlight-light-color;
+  }
+}

@@ -1,0 +1,113 @@
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.topbar {
+  @include flex(row, center, flex-end);
+  height: 60px;
+  width: 100%;
+  background-color: $highlight-text-color;
+  border-bottom: 1px solid $bg-light-color;
+
+  > div {
+    border-left: 1px solid $bg-light-color;
+    padding: 18px 20px;
+    height: 100%;
+    text-align: center;
+  }
+
+}
+
+.wallet-dropdown {
+  @include flex(row, center, center);
+  width: 185px;
+  padding: 18px;
+  position: relative;
+  cursor: pointer;
+  
+  &-header {
+    @include flex(row, center, space-around);
+    width: 100%;
+    padding: 0;
+    border: 0;
+
+    .subsection-header {
+      font-weight: $font-bold;
+      margin: 0;
+    }
+  }
+
+  .wallet-list {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0;
+    background-color: $highlight-light-color;
+    border: 1px solid $bg-light-color;
+    display: none;
+    border-top: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all .2s ease;
+
+    h3, p {
+      font-size: 0.8rem;
+    }
+  }
+
+}
+
+.wallet-dropdown.active { // class has to be added with js
+  background-color: $highlight-light-color;
+
+  .wallet-dropdown-header h3, .icon-link__noncolor {
+    color: $sidebar-dark-color;
+  }
+
+  .icon-arrow-down-small {
+    transform: rotate(180deg);
+    animation: flipdown 0.5s ease 100%;
+
+  }
+
+  .wallet-list {
+    max-height: 125px;
+    display: inline-block;
+    transition: all .2s ease;
+
+    .list-text {
+      font-weight: $font-normal;
+    }
+  }
+}
+
+.notification-icon-wrapper {
+  .icon-notification {
+    position: relative;
+  }
+
+  .icon-notification::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $brand-main-color;
+  }
+}
+
+.profile-container a {
+  @include flex(row, center, center);
+
+  .icon-profile {
+    padding-right: 10px;
+  }
+}

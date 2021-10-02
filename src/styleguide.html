@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Just do it - styleguide</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="vendor/bootstrap-grid.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <link rel="stylesheet" href="vendor/icons/icon-font/css/Glyphter.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- Headers & texts -->
+    <h2 class="section-header">General statistics</h2>
+    <h3 class="subsection-header">Earnings chart</h3>
+
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quia pariatur quidem voluptatem iste perferendis dolorum dolor in voluptates tempore maiores harum assumenda fuga aliquid rerum, amet consectetur error placeat! Repudiandae quisquam deserunt illo at non omnis accusamus dolorem neque voluptates eveniet. Neque aspernatur repudiandae architecto ab inventore, facere nostrum!</p>
+
+    <br>
+
+    <!-- Links -->
+    <a href="#" class="link link-large">http://www.homepage.com</a>
+    <a href="#" class="link link-small">http://www.homepage.com</a>
+    <div href="#" class="link icon-link"><i class="icon-arrow-left"></i></div>
+
+    <i class="icon-links icon-link__color"></i>
+    <i class="icon-trash icon-link__noncolor"></i>
+    <i class="icon-links icon-link__small"></i>
+
+    <br>
+
+    <!-- Buttons -->
+    <button type="button" class="btn btn-default">+ add new</button>
+    <button type="button" class="btn btn-extra-action">Copy link</button>
+
+    <button type="submit" class="btn btn-default">+ add new</button>
+    <button type="submit" class="btn btn-extra-action">Copy link</button>
+
+    <div class="btn btn-refresh icon-large-btn"><i class="icon-refresh"></i></div>
+
+    <br><br>
+
+    <!-- Lists -->
+    <ul class="list one-digit-list">
+      <li><h3 class="list-header">List header</h3><p class="list-text">123</p></li>
+    </ul>
+
+    <br>
+
+    <!-- Checkbox list -->
+    <div class="checkbox-list">
+      <ul class="list">
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__checkmark"></span>
+            Checkbox
+          </label>
+          <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+        </li>
+        <li>
+          <label class="checkbox">
+            <input type="checkbox">
+            <span class="checkbox__checkmark"></span>
+            Checkbox
+          </label>
+          <div href="#" class="link icon-link"><i class="icon-show"></i></div>
+        </li>
+      </ul>
+    </div>
+
+    <br>
+
+    <!-- Inputs & select -->
+    <!-- TO DO: select -->
+    <select maxheight="-1">
+      <option value="">Select</option>
+      <option value="1">Option 1</option>
+    </select>
+
+    <br><br>
+
+    <form>
+      <div class="form-wrapper">
+        <div class="input-container">
+          <label>Name</label>
+          <input class="form-input" type="text" name="name" placeholder="text">
+        </div>
+        <div class="input-container">
+          <label>Required<span class="required-decor">*</span></label>
+          <input class="form-input" type="text" name="name" placeholder="text" required>
+        </div>
+        <div class="input-container">
+          <label class="label-textarea">Please write your message here</label>
+          <textarea class="form-input" type="text" name="name" placeholder="text"></textarea>
+        </div>
+      </div>
+      <div class="form-btn-container">
+        <button type="submit" class="btn btn-default">+ add new</button>
+      </div>
+    </form>
+
+    <div class="form-wrapper"></div>
+
+
+    <br>
+
+    <!-- Table with link -->
+    <div class="table-container__small table-responsive">
+      <table class="table table__small">
+        <thead></thead>
+        <tbody>
+          <tr>
+            <th scope="col">Table header</th>
+            <td><a href="#" class="link link-large">http://www.homepage.com</a></td>
+            <td class="table-actions">
+              <i class="icon-links icon-link__color"></i>
+              <i class="icon-trash icon-link__noncolor"></i>
+            </td>
+          </tr>
+          <tr>
+            <th scope="col">Table header</th>
+            <td><a href="#" class="link link-large">http://www.homepage.com</a></td>
+            <td class="table-actions">
+              <i class="icon-links icon-link__color"></i>
+              <i class="icon-trash icon-link__noncolor"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <!-- Table with sorting, where sorting needs to be done with js -->
+    <div class="table-container__large table-responsive">
+      <table class="table table__large">
+        <thead>
+          <tr>
+            <th scope="col">Initiated date <i class="icon-arrow-down-small icon-link__small table-icon"></i></th>
+            <th scope="col">Amount ($)</th>
+            <th scope="col">Deal</th>
+            <th scope="col">Account</th>
+            <th scope="col">Date</th>
+            <th scope="col">Amount ($)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">17/08/02 (12:58)</th>
+            <td>34,425.00 34,425.00</td>
+            <td>cpl(200)</td>
+            <td>bank</td>
+            <td>cpl(200)</td>
+            <td>bank</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <br>
+
+    <!-- Filtering tabs -->
+
+
+    <!-- Notifications -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>

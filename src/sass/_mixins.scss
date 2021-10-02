@@ -1,0 +1,92 @@
+@mixin flex($flex-direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes flipdown {
+  0% {
+    opacity: 0;
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotateX(8deg);
+  }
+
+  83% {
+    transform: rotateX(6deg);
+  }
+
+  92% {
+    transform: rotateX(-3deg);
+  }
+
+  100% {
+    transform-origin: top center;
+    transform: rotateX(0deg);
+  }
+}
+
+@mixin header($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+@mixin btn($btn-text-color) {
+  color: $btn-text-color;
+  font-size: $base-font-size;
+  font-weight: $font-light;
+  border-radius: $radius;
+  transition: $transition;
+  display: inline-block;
+  border-width: 1px;
+  border-style: solid;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+
+  &:hover, &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &.disabled, &[disabled] {
+    background: #e3e3e3;
+    border-color: #e3e3e3;
+    cursor: not-allowed;
+  }
+}
+
+@mixin a($link-text-color) {
+  color: $link-text-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-light-color;
+  }
+}
+
+@mixin i-svg($size, $color) {
+  font-size: $size;
+  color: $color;
+  height: fit-content;
+  display: inline-flex;
+  cursor: pointer;
+}
+

@@ -1,0 +1,125 @@
+#sidebar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: $sidebar-dark-color;
+  height: 100%;
+}
+
+.navigation {
+  position: relative;
+  height: 100%;
+  width: 190px;
+  background-color: $sidebar-dark-color;
+  transition: $transition ease-in-out;
+
+  > * {
+    border-top: 1px solid $bg-dark-color;
+  }
+
+  .logo-container {
+    @include flex(row, center, space-between);
+    width: 100%;
+    height: 60px;
+    padding: 18px;
+    border: none;
+
+    .logo {
+      font-family: $font-brand;
+      color: $highlight-text-color;
+      font-size: 28px;
+      margin: 0;
+      transition: $transition ease-in-out;
+    }
+
+  }
+
+  .menu-toggler {
+    @include i-svg(20px, $base-text-color);
+  }
+
+  .sidebar-nav {
+    .list {
+      padding: 0;
+    }
+
+    li {
+      @include flex(row, center, flex-start);
+      height: 40px;
+      margin: 0;
+      padding: 0 15px;
+      transition: $transition ease-in-out;
+      cursor: pointer;
+      user-select: none;
+
+      &.active { // has to be added by js
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+    }
+
+    li .link {
+      color: $base-text-color;
+
+      i {
+        padding-right: 14px;
+      }
+    }
+
+    li:hover, li.active {
+      border-left: 5px solid $brand-main-color;
+
+      .link {
+        color: $highlight-text-color;
+      }
+    }
+  }
+
+  .avatar-wrapper {
+    @include flex(column, flex-start, center);
+    width: 100%;
+    padding: 28px 12px;
+    cursor: pointer;
+    user-select: none;
+
+    .section-header {
+      transition: $transition ease-in-out;
+    }
+
+    div {
+      @include flex(row, center, space-between);
+      width: 130px;
+    }
+
+    .avatar-img {
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+
+      img {
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+      }
+    }
+
+    .avatar-img::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 3px;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $checked;
+    }
+  }
+
+  .mobile-topbar-content { // on mobile display: flex
+    position: absolute;
+    bottom: 0;
+    display: none;
+  }
+}

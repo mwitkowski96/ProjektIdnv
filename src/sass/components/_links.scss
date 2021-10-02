@@ -1,0 +1,41 @@
+.link {
+  @include a($link-color);
+
+  &:hover {
+    color: $brand-main-color;
+  }
+}
+
+.link-large {
+  @include a($link-color);
+  font-size: $base-font-size;
+}
+
+.link-small {
+  @include a($link-color);
+  font-size: 14px;
+}
+
+.icon-link {
+  @include i-svg($base-font-size, $link-color);
+  
+  &__color {
+    @include i-svg($base-font-size, $brand-main-color);
+
+    &:hover {
+      color: $base-text-color;
+    }
+  }
+
+  &__noncolor {
+    @include i-svg($base-font-size, $base-text-color);
+
+    &:hover {
+      color: $brand-main-color;
+    }
+  }
+
+  &__small {
+    @include i-svg($base-size, $base-text-color);
+  }
+}

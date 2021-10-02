@@ -1,0 +1,25 @@
+.pagination {
+  display: block;
+  text-align: center;
+  margin: 18px auto;
+  
+  .list {
+    @include flex(row, center, center);
+    margin: 0 auto;
+    max-width: 400px;
+
+    .link {
+      @include flex(column, center, center);
+      width: 35px;
+      height: 35px;
+    }
+
+    .link.active, .link:hover {
+      background: $highlight-light-color;
+      border-radius: $radius;
+      color: $base-text-color;
+      font-weight: $font-normal;
+
+    }
+  }
+}  

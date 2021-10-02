@@ -1,0 +1,155 @@
+/* optional */
+form { 
+  @include flex(column, center, center);
+  margin: 18px auto;
+
+  .form-wrapper {
+    position: relative;
+    margin: 0 auto 18px auto;
+    padding: 18px 0;
+    //min-width: 470px;
+    width: 100%;
+    border-bottom: 1px solid $bg-light-color;
+
+    i.fas {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      cursor: pointer;
+    }
+  }
+}
+
+.input-container {
+  @include flex(row, center, space-between);
+  max-width: 450px;
+  margin: 15px auto;
+
+  .required-decor {
+    color: $required;
+  }
+
+  label {
+    text-align: left;
+    font-weight: $font-normal;
+    white-space: pre-line;
+    max-width: 150px;
+    min-width: 100px;
+  }
+
+  .form-input {
+    border: 1px solid $bg-light-color;
+    border-radius: $radius;
+    padding: $base-size;
+    width: 300px;
+    min-height: 40px;
+
+    &:focus {
+      outline: none;
+      border-color: $sidebar-dark-color;
+      color: $sidebar-dark-color;
+    }
+
+  }
+
+  textarea.form-input {
+    min-height: 100px;
+  }
+}
+
+select {
+  width: 320px;
+  height: 40px;
+  border-radius: $radius;
+  border: 1px solid $bg-light-color;
+  color: $base-text-color;
+  // appearance: none;         /* Remove default arrow */
+  // background-image: url(/dist/vendor/icons/arrow-down-small.svg);    /* Add custom arrow */
+
+  option {
+    width: 100%;
+  }
+}
+
+.checkbox-list .list li {
+  @include flex(row, center, space-between);
+  width: 320px;
+  height: 40px;
+
+  .icon-link {
+    display: none;
+    margin: 0 20px;
+  }
+
+  &:hover {
+    background-color: $highlight-light-color;
+
+    .icon-link {
+      display: inline;
+    }
+  }
+
+}
+
+.checkbox {
+  @include flex(row, center, flex-start);
+  position: relative;
+  padding-left: ($base-size * 4);
+  //margin-bottom: $base-size;
+  user-select: none;
+  width: 450px;
+  height: 100%;
+  cursor: pointer;
+  color: $sidebar-dark-color;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+  }
+
+  &__checkmark {
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    height: 16px;
+    width: 16px;
+    border: 1px solid $bg-light-color;
+    background-color: $highlight-text-color;
+
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 9px;
+      height: 5px;
+      border-left: 2px solid $highlight-text-color;
+      border-bottom: 2px solid $highlight-text-color;
+      transform: rotate(-45deg);
+      top: 4px;
+      left: 3px;
+    }
+  }
+
+  &:hover input ~ .checkbox__checkmark {
+    content: none;
+  }
+  
+  input:checked ~ .checkbox__checkmark {
+    background-color: $checked;
+  }
+
+  input:checked ~ .checkbox__checkmark:after {
+    display: block;
+  }
+
+  &.checkbox--round {
+    .checkbox__checkmark {
+      border-radius: 50%;
+    }
+  }
+
+}
